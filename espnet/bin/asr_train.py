@@ -21,7 +21,7 @@ import torch
 from espnet.utils.cli_utils import strtobool
 from espnet.utils.training.batchfy import BATCH_COUNT_CHOICES
 
-is_torch_1_2_plus = LooseVersion(torch.__version__) >= LooseVersion('1.2')
+is_torch_1_2_plus = LooseVersion('1.2') <= LooseVersion(torch.__version__) < LooseVersion('1.4')
 
 
 # NOTE: you need this func to generate our sphinx doc
